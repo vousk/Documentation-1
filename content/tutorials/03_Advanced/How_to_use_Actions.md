@@ -45,22 +45,22 @@ Currently, 12 different triggers are supported:
 
 The following list defines triggers associated with meshes:
 
-* `BABYLON.ActionManager.NothingTrigger`: Never raised. Used for sub-actions with `action.then` function.
-* `BABYLON.ActionManager.OnPickTrigger`: Raised when the user touches/clicks on a mesh.
-* `BABYLON.ActionManager.OnPickDownTrigger`: Raised when the user touches/clicks down on a mesh
-* `BABYLON.ActionManager.OnPickUpTrigger`: Raised when the user touches/clicks up on a mesh.
-* `BABYLON.ActionManager.OnPickOutTrigger`: Raised when the user touches/clicks down on a mesh and then move off-of the mesh.
-* `BABYLON.ActionManager.OnLeftPickTrigger`: Raised when the user touches/clicks on a mesh with left button.
-* `BABYLON.ActionManager.OnRightPickTrigger`: Raised when the user touches/clicks on a mesh with right button.
-* `BABYLON.ActionManager.OnCenterPickTrigger`: Raised when the user touches/clicks on a mesh with center button.
+* `BABYLON.ActionManager.NothingTrigger`: Never raised. Used for combined actions or sub-actions with `action.then` function.
+* `BABYLON.ActionManager.OnPickTrigger`: Raised when the user does a single touch/click on a mesh (a single click is a "pressed then  released" click while not moving the mouse).
+* `BABYLON.ActionManager.OnPickDownTrigger`: Raised when the user touches/clicks down on a mesh (the event is raised even if the click is kept pressed).
+* `BABYLON.ActionManager.OnPickUpTrigger`: Raised when the user releases its current touch/click.
+* `BABYLON.ActionManager.OnPickOutTrigger`: Raised when the user touches/clicks down on a mesh and then move off of the mesh.
+* `BABYLON.ActionManager.OnLeftPickTrigger`: Raised when the user clicks on a mesh with left button.
+* `BABYLON.ActionManager.OnRightPickTrigger`: Raised when the user clicks on a mesh with right button.
+* `BABYLON.ActionManager.OnCenterPickTrigger`: Raised when the user clicks on a mesh with center button.
 * `BABYLON.ActionManager.OnLongPressTrigger`: Raised when the user touches/clicks up on a mesh for a long period of time (defined by BABYLONActionManager.LongPressDelay). 
 * `BABYLON.ActionManager.OnPointerOverTrigger`: Raised when the pointer is over a mesh. Raised just once.
 * `BABYLON.ActionManager.OnPointerOutTrigger`: Raised when the pointer is no more over a mesh. Raised just once.
 * `BABYLON.ActionManager.OnIntersectionEnterTrigger`: Raised when the mesh is in intersection with another mesh. Raised just once.
 * `BABYLON.ActionManager.OnIntersectionExitTrigger`: Raised when the mesh is no more in intersection with another mesh. Raised just once.
 * `BABYLON.ActionManager.OnKeyDownTrigger`: Raised when a key is press.
-* `BABYLON.ActionManager.OnKeyUpTrigger`: Raised when a key is up
-* `BABYLON.ActionManager.OnEveryFrameTrigger`: ???
+* `BABYLON.ActionManager.OnKeyUpTrigger`: Raised when a key is up.
+* `BABYLON.ActionManager.OnEveryFrameTrigger`: Raised on every frame.
 
 For intersection triggers, you have to specify the "other" mesh with the following code:
 
